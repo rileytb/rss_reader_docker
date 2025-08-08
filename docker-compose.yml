@@ -7,6 +7,7 @@ services:
             - APP_NAME=RSS
             - APP_FEED_UPDATE_FREQUENCY=35
             - APP_LOAD_POST_THUMBNAILS=true
+            - APP_PRUNE_POSTS_AFTER_DAYS=3
         volumes:
             - /docker/rss-files:/app/storage
         ports:
