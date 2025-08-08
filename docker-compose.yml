@@ -1,0 +1,14 @@
+version: "2"
+services:
+    rss:
+        image: ghcr.io/ssddanbrown/rss:latest
+        container_name: rss
+        environment:
+            - APP_NAME=RSS
+            - APP_FEED_UPDATE_FREQUENCY=35
+            - APP_LOAD_POST_THUMBNAILS=true
+        volumes:
+            - /docker/rss-files:/app/storage
+        ports:
+            - "8093:80"
+        restart: unless-stopped
